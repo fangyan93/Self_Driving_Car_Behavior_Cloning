@@ -95,18 +95,13 @@ Left Image for 1st track    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbs
 Right Image for 1st track   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  Right Image for 2nd track  <br />
 </p>
 
-<!-- I then recorded the vehicle recovering from the left side and right sides of the road back to center so that the vehicle would learn to .... These images show what a recovery looks like starting from ... :
-An example of cropped image actually used for training is shown below: -->
+<!-- I then recorded the vehicle recovering from the left side and right sides of the road back to center so that the vehicle would learn to .... These images show what a recovery looks like starting from ... : -->
+An example of cropped image actually used for training is shown below: 
 <p align="center">
   <img src="./image/center_track2_crop.jpg">
 </p>
 
-Then I repeated this process on track two in order to get more data points.
 
-To augment the data sat, I also flipped images and angles thinking that this would ... For example, here is an image that has then been flipped:
-
-![alt text][image6]
-![alt text][image7] -->
 
 Etc ....
 
