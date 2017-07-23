@@ -64,7 +64,7 @@ Also, since the input of the model is a single image which should be from the ca
 The number and dimension of layers is refered to the model which is used in real practice. 
 
 #### 4. Appropriate training data
-The raw data of dimention [160.320] firsly go through normalization and centering, then 70 rows on the top of image and 25 rows at the bottom are discarded, since that part of image contains mostly background, which is likely not to be helpful but probably bring about noises. 
+The raw data of dimention [160.320] firsly go through normalization and centering, then 50 rows on the top of image and 25 rows at the bottom are discarded, since that part of image contains mostly background, which is likely not to be helpful but probably bring about noises. 
 In order to get more comprehensive data, both clockwise and counter-clockwise driving data is used in training. All three cameras' images are used, too. 
 
 
@@ -84,7 +84,7 @@ After that, 3 fully connected layers with size of 100, 50, and 25 is added befor
 
 ####3. Creation of the Training Set & Training Process
 
-To capture good driving behavior, I first recorded 3 laps on track one clockwise and counter clockwise respectively, using the center camera and both side cameras. Here are example images of three camera images:
+To capture good driving behavior, I recorded 3-5 laps on 2 tracks clockwise and counter clockwise respectively, using the center camera and both side cameras. Here are example images of three camera images:
 
 <p align="center">
 <img src = "./image/center_track1.jpg">    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <img src = "./image/center_track2.jpg"> <br />
@@ -96,10 +96,10 @@ Right Image for 1st track   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbs
 </p>
 
 <!-- I then recorded the vehicle recovering from the left side and right sides of the road back to center so that the vehicle would learn to .... These images show what a recovery looks like starting from ... :
-
-![alt text][image3]
-![alt text][image4]
-![alt text][image5]
+An example of cropped image actually used for training is shown below: -->
+<p align="center">
+  <img src="./image/center_track2_crop.jpg">
+</p>
 
 Then I repeated this process on track two in order to get more data points.
 
