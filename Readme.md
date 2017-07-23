@@ -30,7 +30,7 @@ This repository includes the following files:
 * drive.py for driving the car in autonomous mode
 * model_track1.h5 containing a trained convolution neural network for track1
 * model_track2.h5 containing a trained convolution neural network for track1
-* writeup_report.md or writeup_report.pdf summarizing the results
+* Readme.md summarization the results
 * first_track.mp4 a demo video for test in autonomously mode on 1st track
 * second_track.mp4 a demo video for test in autonomously mode on 2nd track
 
