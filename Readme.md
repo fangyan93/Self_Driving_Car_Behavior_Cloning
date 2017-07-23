@@ -87,7 +87,7 @@ After that, 3 fully connected layers with size of 100, 50, and 25 is added befor
 To capture good driving behavior, I first recorded 3 laps on track one clockwise and counter clockwise respectively, using the center camera and both side cameras. Here are example images of three camera images:
 
 <p align="center">
-![alt text][image1]   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ![alt text][image4] <br />
+<img src = "./image/center_track1.jpg">    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ![alt text][image4] <br />
 Center Image for 1st track   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  Center Image for 2nd track  <br />
 ![alt text][image2]   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ![alt text][image5]  <br />
 Left Image for 1st track    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  Left Image for 2nd track  <br />
