@@ -1,4 +1,4 @@
-#**Behavioral Cloning** 
+# **Behavioral Cloning** 
 
 
 **Behavioral Cloning Project**
@@ -30,13 +30,13 @@ My project includes the following files:
 * model.h5 containing a trained convolution neural network 
 * writeup_report.md or writeup_report.pdf summarizing the results
 
-####2. Submission includes functional code
+#### 2. Submission includes functional code
 Using the Udacity provided simulator and my drive.py file, the car can be driven autonomously around the track by executing 
 ```sh
 python drive.py model.h5
 ```
 
-####3. Submission code is usable and readable
+#### 3. Submission code is usable and readable
 
 understanding of generator:
 generator is a mechanism in python, which is usually in form of a function Instead return something at the end of a function and free all temporary variable with that function scope, the generator use keyword 'yield' to return something at somewhere in the function, while save all the variables in the function, and next time when a 'next()' call on generator, the code inside would start excution after 'yield'. 
@@ -44,18 +44,18 @@ In this way, we can only load a small batch of data once without worrying about 
 
 The model.py file contains the code for training and saving the convolution neural network. The file shows the pipeline I used for training and validating the model, and it contains comments to explain how the code works.
 
-###Model Architecture and Training Strategy
+### 4.Model Architecture and Training Strategy
 
-####1. An appropriate model architecture has been employed
+#### 1. An appropriate model architecture has been employed
 Model: In this project, a convolutional neural network with 4 convolutional layers followed by 3 fully connected layers is used in training. 
 
-####2. Attempts to reduce overfitting in the model
+#### 2. Attempts to reduce overfitting in the model
 In order to defense againist overfitting in keras, l2 norm regularization and dropout are used here. 
 A dropout layer followes each of the first 2 convolutional layers, this is a simple way to reduce overfitting.
 Also, a l2 norm regularization is added to the first 2 convolational layers and the first fully connected layer. Training on the first track do not require this regularization, I obtain a fine model for it without using this. However, the performance of model on second track is much better after adding this regularization.
 
 
-####3. Model parameter tuning
+#### 3. Model parameter tuning
 The model used an adam optimizer, so the learning rate was not tuned manually (model.py line 25).
 Batch size is typcially in [10,200], here 32 is used as batch size in training. 
 The number of epoches is set to 5, since based on the early stopping, 5 epoches is enough, more epoches does not help much in reducing loss. 
@@ -63,12 +63,12 @@ The 20% training dataset is used for validation, rest data is used in training.
 Also, since the input of the model is a single image which should be from the camera on the front of car, and output is a steering angle, a correction factor on the ground truth steering angle is involved when using image taken by two side cameras. The factor is set to 0.2 as suggested in lecture.
 The number and dimension of layers is refered to the model which is used in real practice. 
 
-####4. Appropriate training data
+#### 4. Appropriate training data
 The raw data of dimention [160.320] firsly go through normalization and centering, then 70 rows on the top of image and 25 rows at the bottom are discarded, since that part of image contains mostly background, which is likely not to be helpful but probably bring about noises. 
 In order to get more comprehensive data, both clockwise and counter-clockwise driving data is used in training. All three cameras' images are used, too. 
 
 
-####2. Final Model Architecture
+### 5. Final Model Architecture
 
 The final model architecture (model.py lines 12-40) consisted of a convolution neural network with the following layers and layer sizes.
 The 1st conv layer consists of 24 filters of size 5 by 5.
