@@ -86,7 +86,12 @@ After that, 3 fully connected layers with size of 100, 50, and 25 is added befor
 
 To capture good driving behavior, I first recorded 3 laps on track one clockwise and counter clockwise respectively, using the center camera and both side cameras. Here are example images of three camera images:
 
-![alt text][image1]![alt text][image2]![alt text][image3]
+![alt text][image1]
+Center Image
+![alt text][image2]
+Left Image
+![alt text][image3]
+Right Image
 
 <!-- I then recorded the vehicle recovering from the left side and right sides of the road back to center so that the vehicle would learn to .... These images show what a recovery looks like starting from ... :
 
