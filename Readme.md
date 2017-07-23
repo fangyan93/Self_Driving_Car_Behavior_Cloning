@@ -80,8 +80,11 @@ The 4th conv layer consists of 64 filters of size 3 by 3.
 The first 2 conv layers are followed by an activation layer, a dropout layer and a pooling layer. The 3rd conv layer does not have dropout layer followed, there is only an activation layer after the 4th conv layer.
 After that, 3 fully connected layers with size of 100, 50, and 25 is added before the final output layer. 
 
-
-####3. Creation of the Training Set & Training Process
+The image below is visualization of the model
+<p align="center">
+  <img src="./image/model.png">
+</p>
+#### 3. Creation of the Training Set & Training Process
 
 To capture good driving behavior, I recorded 3-5 laps on 2 tracks clockwise and counter clockwise respectively, using the center camera and both side cameras. Here are example images of three camera images:
 
