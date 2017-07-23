@@ -87,11 +87,11 @@ After that, 3 fully connected layers with size of 100, 50, and 25 is added befor
 To capture good driving behavior, I first recorded 3 laps on track one clockwise and counter clockwise respectively, using the center camera and both side cameras. Here are example images of three camera images:
 
 <p align="center">
-<img src = "./image/center_track1.jpg">    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ![alt text][image4] <br />
+<img src = "./image/center_track1.jpg">    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <img src = "./image/center_track2.jpg">
 Center Image for 1st track   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  Center Image for 2nd track  <br />
-![alt text][image2]   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ![alt text][image5]  <br />
+<img src = "./image/left_track1.jpg">   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <img src = "./image/left_track2.jpg">    <br />
 Left Image for 1st track    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  Left Image for 2nd track  <br />
-![alt text][image3]   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ![alt text][image6] <br />
+<img src = "./image/right_track1.jpg">    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src = "./image/right_track2.jpg">  
 Right Image for 1st track   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  Right Image for 2nd track  <br />
 </p>
 
