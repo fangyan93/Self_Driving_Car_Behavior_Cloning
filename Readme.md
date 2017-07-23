@@ -24,12 +24,15 @@ Simulator can be downloaded <a href="https://d17h27t6h515a5.cloudfront.net/tophe
 
 ---
 
-My project includes the following files:
+This repository includes the following files:
 * model.py containing the script to create and train the model
 * drive.py for driving the car in autonomous mode
 * model_track1.h5 containing a trained convolution neural network for track1
 * model_track2.h5 containing a trained convolution neural network for track1
 * writeup_report.md or writeup_report.pdf summarizing the results
+* first_track.mp4 a demo video for test in autonomously mode on 1st track
+* second_track.mp4 a demo video for test in autonomously mode on 2nd track
+
 Note that I have spent a day to tried to train a model works for both tracks, using all training data on 2 tracks and over 2 times paratemeters more than any single model, but the result is not good enough, so I can only submit 2 seperate models. Please leave a message if you have advise for me to get a powerful model for both tracks, I guess a lot more training data may be required.
 
 #### 2. Submission includes functional code
@@ -113,7 +116,8 @@ After that, the cropped image data goes through the neural network and produce a
 The number of epoches is 5-7, I used an adam optimizer so that manually training the learning rate wasn't necessary.
 
 
-At the end of the process, the vehicle is able to drive autonomously around the track without leaving the road. The autonomous driving behavior for the first track is really humanlike, while the car performs relatively worse on the second track, especially at steep slopes. 
+At the end of the process, the vehicle is able to drive autonomously around the track without leaving the road, expect that there is only small mistake on second_track.mp4, where the car leave the right lane and enter the left one for a second, at a 180 degree turn, it goes back to right lane immediately. The autonomous driving behavior for the first track is really humanlike, while the car performs relatively worse on the second track, especially at steep slopes. 
+
 Note that the desire speed for the first track is generally higher than the second one, which makes sense, because it is so even when I drive in training mode. Play driving on the second track is really hard. 9 mph is good for both track. 
 
 Besides, to obtain a good model, the second track needs much more data than the first one. Note that I also combine data of both tracks and train a model with more much parameters, in order to get a model to drive automatically on both tracks. But I failed on this. It performs worse than the two models uploaded on both tracks. I may try it later.
