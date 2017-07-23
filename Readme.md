@@ -92,6 +92,7 @@ The image below is visualization of the model
 <p align="center">
   <img src="./image/model.png">
 </p>
+
 ### 5. Creation of the Training Set & Training Process
 
 To capture good driving behavior, I recorded 3-5 laps on 2 tracks clockwise and counter clockwise respectively, using the center camera and both side cameras. Here are example images of three camera images:
