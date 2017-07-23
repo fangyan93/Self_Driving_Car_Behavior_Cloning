@@ -27,8 +27,10 @@ For simulator
 My project includes the following files:
 * model.py containing the script to create and train the model
 * drive.py for driving the car in autonomous mode
-* model.h5 containing a trained convolution neural network 
+* model_track1.h5 containing a trained convolution neural network for track1
+* model_track2.h5 containing a trained convolution neural network for track1
 * writeup_report.md or writeup_report.pdf summarizing the results
+Note that I have spent a day to tried to train a model works for both tracks, using all training data on 2 tracks and over 2 times paratemeters more than any single model, but the result is not good enough, so I can only submit 2 seperate models. Please leave a message if you have advise for me to get a powerful model for both tracks, I guess a lot more training data may be required.
 
 #### 2. Submission includes functional code
 Using the Udacity provided simulator and my drive.py file, the car can be driven autonomously around the track by executing 
@@ -57,9 +59,9 @@ Also, a l2 norm regularization is added to the first 2 convolational layers and 
 
 #### 3. Model parameter tuning
 The model used an adam optimizer, so the learning rate was not tuned manually (model.py line 25).
-Batch size is typcially in [10,200], here 32 is used as batch size in training. 
-The number of epoches is set to 5, since based on the early stopping, 5 epoches is enough, more epoches does not help much in reducing loss. 
-The 20% training dataset is used for validation, rest data is used in training. 
+Batch size is typcially in [10,200], here 96 is used as batch size in training. 
+The number of epoches is set to 5-7, since based on the early stopping, 5 epoches is enough, more epoches does not help much in reducing loss. 
+The 30% training dataset is used for validation, rest data is used in training. 
 Also, since the input of the model is a single image which should be from the camera on the front of car, and output is a steering angle, a correction factor on the ground truth steering angle is involved when using image taken by two side cameras. The factor is set to 0.2 as suggested in lecture.
 The number and dimension of layers is refered to the model which is used in real practice. 
 
@@ -78,9 +80,6 @@ The 4th conv layer consists of 64 filters of size 3 by 3.
 The first 2 conv layers are followed by an activation layer, a dropout layer and a pooling layer. The 3rd conv layer does not have dropout layer followed, there is only an activation layer after the 4th conv layer.
 After that, 3 fully connected layers with size of 100, 50, and 25 is added before the final output layer. 
 
-<!-- Here is a visualization of the architecture (note: visualizing the architecture is optional according to the project rubric)
-
-![alt text][image1] -->
 
 ####3. Creation of the Training Set & Training Process
 
