@@ -103,19 +103,18 @@ An example of cropped image actually used for training is shown below:
   <img src="./image/center_track2_crop.jpg">
 </p>
 
+After the collection process, I had about 9000 number of data points for each track, which mean about 27000 images. 30% of them is used as validation.
 
+In training, generator is used for load training data with a batch size of 96, which means 96 images are used in each generation. All training data is shuffled between epoches. 
+data preprocessing involves normalization and centering, which converts all data to be between [-0.5,0.5].
+Then all images are cropped through a crop2D layer in keras.
+After that, the cropped image data goes through the neural network and produce a single output as prediction of steering angle corresponds to the input image.
 
-Etc ....
-
-After the collection process, I had X number of data points. I then preprocessed this data by ...
-
-
-I finally randomly shuffled the data set and put Y% of the data into a validation set. 
-
-I used this training data for training the model. The validation set helped determine if the model was over or under fitting. The ideal number of epochs was Z as evidenced by ... I used an adam optimizer so that manually training the learning rate wasn't necessary.
+The number of epoches is 5-7, I used an adam optimizer so that manually training the learning rate wasn't necessary.
 
 
 At the end of the process, the vehicle is able to drive autonomously around the track without leaving the road. The autonomous driving behavior for the first track is really humanlike, while the car performs relatively worse on the second track, especially at steep slopes. 
-Note that the desire speed for the first track is generally higher than the second one, which makes sense, because it is so even when I drive in training mode. Play driving on the second track is really hard. 
-Besides, to obtain a good model, the second track needs much more data than the first one. 
+Note that the desire speed for the first track is generally higher than the second one, which makes sense, because it is so even when I drive in training mode. Play driving on the second track is really hard. 9 mph is good for both track. 
+
+Besides, to obtain a good model, the second track needs much more data than the first one. Note that I also combine data of both tracks and train a model with more much parameters, in order to get a model to drive automatically on both tracks. But I failed on this. It performs worse than the two models uploaded on both tracks. I may try it later.
 
